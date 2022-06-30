@@ -1,11 +1,11 @@
-from python:3.10
+FROM python:3.10
 
-workdir /app
+WORKDIR /app
 
-copy requirements.txt /app/
+COPY requirements.txt /app/
 
-run pip3 install -r requirements.txt
+RUN pip3 install -r requirements.txt
 
-copy . /app
+COPY . /app
 
-cmd python3 bot.py
+CMD python3 main.py
