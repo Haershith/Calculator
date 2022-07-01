@@ -66,6 +66,15 @@ CALCULATE_BUTTONS = InlineKeyboardMarkup(
     ]
 )
 
+ABOUT_TEXT = """
+• *BoT Name* : `MH Calculator`
+• *Develoveper* : [Mutyala Harshith](https://t.me/MutyalaHarshith)
+• *Support Group* : [MHGcHaT](https://t.me/MHGcHaT)
+• *GitHub* : [MutyalaHarshith](https://GitHub.com/MutyalaHarshith)
+• *Source Code* : [Calculator](https://GitHub.com/MutyalaHarshith/Calculator)
+• *Hosted On* : [Heroku](https://heroku.com)
+• *Language* : `Python`
+
 
 @Bot.on_message(filters.command(["start"]))
 async def start(_, message):
@@ -76,6 +85,14 @@ async def start(_, message):
         quote=True
     )
 
+@Bot.on_message(filters.command(["about"]))
+async def start(_, message):
+    await message.reply_text(
+        text=ABOUT_TEXT.format(message.from_user.mention),
+        disable_web_page_preview=True,
+        reply_markup=START_BUTTONS,
+        quote=True
+    )
 
 @Bot.on_message(filters.private & filters.command(["mh", "calculate", "harshith"]))
 async def calculate(_, message):
@@ -85,6 +102,7 @@ async def calculate(_, message):
         disable_web_page_preview=True,
         quote=True
     )
+
 
 
 @Bot.on_message(filters.private & filters.text)
@@ -100,7 +118,6 @@ async def evaluate(_, message):
         disable_web_page_preview=True,
         quote=True
     )
-
 
 @Bot.on_callback_query()
 async def cb_data(_, message):
