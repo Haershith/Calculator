@@ -1,0 +1,26 @@
+{
+    "name": "Calculator-Bot",
+    "description": "A telegram calculator bot",
+    "repository": "https://github.com/Mega-Hero/Calculator",
+    "keywords": [
+        "calculator",
+        "telegram bot",
+        "pyrogram"
+    ],
+    "env": {
+        "BOT_TOKEN": {
+            "description": "How To Get @botfather"
+        },
+        "API_ID": {
+            "description": "How To Get my.telegram.org"
+        },
+        "API_HASH": {
+            "description": "How To Get my.telegram.org"
+        }
+    },
+    "buildpacks": [
+        {
+            "url": "heroku/python"
+        }
+    ]
+}
