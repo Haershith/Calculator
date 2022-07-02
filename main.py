@@ -82,7 +82,6 @@ async def start(_, message):
     await message.reply_photo(
         photo="https://telegra.ph/file/236794ce4bb2213eaae1e.jpg",
         caption=START_TEXT.format(message.from_user.mention),
-        disable_web_page_preview=True,
         reply_markup=START_BUTTONS,
         quote=True
     )
