@@ -29,7 +29,7 @@ START_BUTTONS = InlineKeyboardMarkup(
     ]
 )
 
-CALCULATE_TEXT = "𝑫𝒆𝒗𝒆𝒍𝒐𝒑𝒆𝒅 𝒃𝒚 @MutyalaHarshith 𝑪𝒂𝒍𝒄𝒖𝒍𝒂𝒕𝒆 :"
+CALCULATE_TEXT = "𝑫𝒆𝒗𝒆𝒍𝒐𝒑𝒆𝒅 𝒃𝒚 @MutyalaHarshith 𝑪𝒂𝒍𝒄𝒖𝒍𝒂𝒕𝒆 :  "
 
 CALCULATE_BUTTONS = InlineKeyboardMarkup(
     [
@@ -76,6 +76,20 @@ ABOUT_TEXT = """
 • **Language** : `Python`
 """
 
+HELP_TEXT = """
+Yourself {},
+
+This Is Normal Telegram Calculator BoT
+
+U Can Use this Bot for calculate By your question
+
+It is Clarifying Your question 
+
+U can also use direct text like Eg : 23×2
+
+Any Issues By ask in : [MHGcHaT](https://t.me/MHGcHaT]
+"""
+
 
 @Bot.on_message(filters.command(["start"]))
 async def start(_, message):
@@ -91,6 +105,15 @@ async def start(_, message):
     await message.reply_text(
         text=ABOUT_TEXT.format(message.from_user.mention),
         disable_web_page_preview=True,
+        reply_markup=START_BUTTONS,
+        quote=True
+    )
+
+@Bot.on_message(filters.command(["help"]))
+async def start(_, message):
+    await message.reply_photo(
+        photo="https://te.legra.ph/file/edb5dcfef8a8203f11ce2.jpg",
+        caption=HELP_TEXT.format(message.from_user.mention),
         reply_markup=START_BUTTONS,
         quote=True
     )
