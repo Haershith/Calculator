@@ -77,7 +77,7 @@ ABOUT_TEXT = """
 """
 
 HELP_TEXT = """
-Yourself {},
+Your Name {},
 
 This Is Normal Telegram Calculator BoT
 
@@ -85,9 +85,11 @@ U Can Use this Bot for calculate By your question
 
 It is Clarifying Your question 
 
-U can also use direct text like Eg : 23×2
+U can also use direct text like
 
-Any Issues By ask in : [MHGcHaT](https://t.me/MHGcHaT]
+Eg : 23×2
+
+Any Issues By ask in : [MHGcHaT](https://t.me/MHGcHaT)
 """
 
 
