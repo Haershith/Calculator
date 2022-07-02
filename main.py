@@ -74,6 +74,7 @@ ABOUT_TEXT = """
 • *Source Code* : [Calculator](https://GitHub.com/MutyalaHarshith/Calculator)
 • *Hosted On* : [Heroku](https://heroku.com)
 • *Language* : `Python`
+"""
 
 
 @Bot.on_message(filters.command(["start"]))
